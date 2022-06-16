@@ -39,7 +39,7 @@ body {
     display: flex;
 }
 
-.menu li {
+.menu  li {
     list-style-type: none;
     position: relative;
 }
@@ -49,20 +49,39 @@ body {
     text-decoration: none;
     color: white;
     font-size: 14px;
+    display: block;
 }
 
-.menu li a:hover {
+.menu li:hover {
     background-color: #1d52ff;
+    text-shadow: 0 0 10px black;
 }
 
-.menu li:hover .submenu {
+.menu > li:hover > .submenu,
+.submenu li:hover > .submenu {
     display: block;
 }
 
 .submenu {
     display: none;
     position: absolute;
-    top: 34px;
+    top: 50px;
     left: 0;
     background-color: #1d52ff;
+    min-width: 120%;
+}
+
+.submenu li:hover {
+    background-color: #174fbe;
+    text-shadow: 0 0 10px black;
+}
+
+.submenu li {
+    position: relative;
+}
+
+.submenu li .submenu {
+    position: absolute;
+    top: 0;
+    left: 125px; 
 }
